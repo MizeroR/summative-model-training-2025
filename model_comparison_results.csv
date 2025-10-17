@@ -1,0 +1,8 @@
+Model,Test Accuracy,Type
+Random Forest,0.638148667601683,Traditional ML
+SVM,0.7601683029453016,Traditional ML
+Gradient Boosting,0.6185133239831697,Traditional ML
+Simple CNN,0.7896212935447693,Deep Learning
+MobileNetV2,0.7882187962532043,Deep Learning
+Multi-Branch CNN,0.7279102206230164,Deep Learning
+EfficientNetB0,0.2664796710014343,Deep Learning

@@ -1,0 +1,10 @@
+Class,Precision,Recall,F1-Score,Support,Class_Size
+Cardboard,0.0,0.0,0.0,69,461
+Food Organics,0.0,0.0,0.0,62,411
+Glass,0.0,0.0,0.0,63,420
+Metal,0.0,0.0,0.0,118,790
+Miscellaneous Trash,0.0,0.0,0.0,75,495
+Paper,0.0,0.0,0.0,75,500
+Plastic,0.23719165085388993,0.9057971014492754,0.37593984962406013,138,921
+Textile Trash,0.0,0.0,0.0,48,318
+Vegetation,0.34946236559139787,1.0,0.5179282868525896,65,436
