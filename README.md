@@ -157,6 +157,68 @@ The notebook generates the following outputs in `/kaggle/working/` or your local
 - `training_history.csv` - Epoch-by-epoch training metrics
 - `best_realwaste_model.h5` - Trained model weights (best performer)
 
+## 📥 Pre-trained Model
+
+Due to file size limitations, the trained model is hosted on Google Drive.
+
+### Download Links:
+
+| Option | Link | Purpose |
+|--------|------|---------|
+| 🔗 **View/Preview** | [Open in Google Drive](https://drive.google.com/file/d/1vTWIcTY-HBo6yFyZ6N0-XqagWXWjj4i_/view?usp=sharing) | Preview before downloading |
+| ⬇️ **Direct Download** | [Download best_realwaste_model.h5](https://drive.google.com/uc?export=download&id=1vTWIcTY-HBo6yFyZ6N0-XqagWXWjj4i_) | Instant download |
+
+**Model Size:** ~46.5 MB (check your file size and add here)
+
+### How to Use:
+
+After downloading, load the model:
+```python
+from tensorflow import keras
+import numpy as np
+
+# Load the model
+model = keras.models.load_model('best_realwaste_model.h5')
+
+# Verify it loaded correctly
+model.summary()
+
+# Make predictions on new images
+# Assuming 'image_array' is your preprocessed image (224x224x3)
+predictions = model.predict(image_array)
+predicted_class_idx = np.argmax(predictions, axis=1)
+
+# Class labels
+CLASS_LABELS = [
+    'Cardboard', 'Food Organics', 'Glass', 'Metal',
+    'Miscellaneous Trash', 'Paper', 'Plastic',
+    'Textile Trash', 'Vegetation'
+]
+
+print(f"Predicted: {CLASS_LABELS[predicted_class_idx[0]]}")
+print(f"Confidence: {np.max(predictions) * 100:.2f}%")
+```
+
+### Model Specifications:
+- **Architecture:** EfficientNetB0 with fine-tuning
+- **Input Shape:** (224, 224, 3) - RGB images
+- **Output Classes:** 9 waste categories
+- **Framework:** TensorFlow 2.x / Keras
+- **Test Accuracy:** ~85-90% (update with your actual result)
+- **Training Data:** 4,752 images from RealWaste dataset
+- **Training Platform:** Kaggle (GPU T4)
+
+### Quick Test:
+```python
+# Download and test in one go
+!gdown 1vTWIcTY-HBo6yFyZ6N0-XqagWXWjj4i_
+# If gdown not installed: pip install gdown
+
+from tensorflow import keras
+model = keras.models.load_model('best_realwaste_model.h5')
+print("✓ Model loaded successfully!")
+```
+
 ## 🎓 Educational Value
 
 This project demonstrates:
