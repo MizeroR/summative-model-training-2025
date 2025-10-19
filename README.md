@@ -277,7 +277,6 @@ Contributions are welcome! Please:
 ## 📧 Contact
 
 For questions or collaboration:
-- **Author:** [Your Name]
 - **GitHub:** [@MizeroR](https://github.com/MizeroR)
 
 ## 🙏 Acknowledgments
